@@ -36,10 +36,10 @@
     margin-right: 50px;
     margin-bottom: 50px;
     line-height: 1.25em;
-    font-size: 20px;
+    font-size: 15px;
 }
 .icon-text{
-    font-size:30px ;
+    font-size:20px ;
 }
 .primary-anc a{
     text-decoration: none;
@@ -279,7 +279,7 @@ footer p{
         justify-content: center;
     }
     .logo img{
-        width: 40px;
+        width: 60px;
     }
     .products{
         grid-template-columns: repeat(1,1fr);
