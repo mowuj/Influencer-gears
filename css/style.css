@@ -55,15 +55,25 @@ nav{
 .navigation{
     display: flex;
 }
-nav li{
+.navigation li{
     list-style: none;
-    margin-right: 20px;
+    margin: 10px;
     padding: 0 10px;
     
 }
-nav li a{
+.navigation li a{
     text-decoration: none;
     color: black;
+    font-weight: 600px;
+    padding: 15px 10px;
+}
+#nav-toggler{
+    display: none;
+}
+.nav-toggler-icon{
+    display: none;
+    color:black;
+    font-size: 30px;
 }
 /*------------
     banner css 
@@ -101,20 +111,27 @@ nav li a{
 /*------------
     company logo css 
 -------------*/
+
 .logo{
     border-top: 1px solid #FF008E;
     border-bottom: 1px solid #FF008E;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    margin: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
 }
 /*------------
     products section css 
 -------------*/
 .section-title{
     text-align: center;
+    margin: 50px 0;
 }
+.section-title h2{
+    font-size: 40px;
+}
+
 .products{
 
 display: grid;
@@ -146,7 +163,36 @@ grid-row-gap: 30px;
 .fa-star.empty{
     color: #AEAEAE;
 }
+/*-----------------
+bonus section css 
+-------------------*/
 
+.bonus-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0;
+    grid-column-gap: 0;
+}
+.bonus-right h2{
+    flex: 1;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.bonus-right p{
+    font-size: 1.25em;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+.bonus-left{
+    text-align: center;
+}
+.bonus-left img{
+    width: 80%;
+    height: 300px;
+    border-radius: 10px;
+}
 /*------------
     footer css 
 -------------*/
@@ -167,7 +213,6 @@ footer p{
 .icon{
     margin-right: 20px;
     font-size: 35px;
-    
     border-radius: 10px;
 }
 
@@ -175,6 +220,27 @@ footer p{
 @media (max-width:688px){
     body{
         align-items: center;
+    }
+    .nav-toggler-icon{
+        display: block;
+    }
+    .navigation{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        padding: 20px 0;
+        transform: translateY(-330px);
+        transition: .5s ease-in-out;
+    }
+    .navigation li a{
+        color: #121212;
+    }
+    #nav-toggler:checked ~ .navigation{
+        transform: translateY(0px);
     }
     .banner{
         grid-template-columns: repeat(1,1fr);
@@ -193,29 +259,63 @@ footer p{
         width: 350px;
         justify-content: center;
     }
+    .logo {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 30px;
+        margin: 50px 0;
+        border: 0;
+        text-align: center;
+    }
     .products{
         grid-template-columns: repeat(1,1fr);
         grid-row-gap: 30px;
         align-items: center;
-    }
-    .company .logo{
         
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 275.21px;
-        height: 61.46px;
-        border: 0;
+        
     }
-    
-    
+    .bonus-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    }
+    .bonus-right{
+        width: 80%;
+        margin: 50px 0;
+        align-items: center;
+        text-align: center;
+    }
 }
 @media only screen and (min-width:688px)
 and (max-width:992px){
     body{
         align-items: center;
     }
+    .nav-toggler-icon{
+        display: block;
+        cursor: pointer;
+    }
+    .navigation{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        flex-direction: column;
+        align-items: center;
+        background-color: #758283;
+        padding: 20px 0;
+        transform: translateY(-500px);
+        transition: .5s ease-in-out;
+    }
+    .navigation li a{
+        color: #fff;
+    }
+    #nav-toggler:checked ~ .navigation{
+        transform: translateY(0px);
+    }
+    
     .banner{
         grid-template-columns: repeat(1,1fr);
         height: fit-content;
@@ -229,14 +329,36 @@ and (max-width:992px){
     .banner-right{
         text-align: center;
     }
+    
     .banner-right img{
         width: 350px;
         justify-content: center;
+    }
+    .logo {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 30px;
+        margin: 50px 0;
+        border: 0;
+        text-align: center;
     }
     .products{
         
         grid-template-columns: repeat(2,1fr);
         align-items: center;
+        justify-content: center;
+    }
+    .bonus-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    }
+    .bonus-right{
+        width: 100%;
+        margin: 50px 0;
+        align-items: center;
+        text-align: center;
     }
     
 }
