@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300&family=Playfair+Display:wght@500&family=Poppins:wght@300;500&family=Raleway:wght@500&display=swap');*{
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300&family=Playfair+Display:wght@500&family=Poppins:wght@300;500&family=Raleway:wght@500&display=swap');
+*{
     margin: 0;
     padding: 0;
 }
@@ -123,7 +124,7 @@ nav{
     justify-content:space-around;
     align-items: center;
     padding: 20px 0;
-    margin-left: 50px;
+    
 }
 /*------------
     products section css 
