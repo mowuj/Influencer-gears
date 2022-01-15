@@ -119,10 +119,11 @@ nav{
     border-top: 1px solid #FF008E;
     border-bottom: 1px solid #FF008E;
     display: grid;
-    grid-template-columns: repeat(7,1fr);
-    justify-content: center;
+    grid-template-columns: repeat(6,1fr);
+    justify-content:space-around;
     align-items: center;
     padding: 20px 0;
+    margin-left: 50px;
 }
 /*------------
     products section css 
